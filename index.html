@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URL Shortener</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .short-url {
+      font-size: 18px;
+      margin-top: 10px;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>URL Shortener</h2>
+    <input type="text" id="original-url" placeholder="Enter your URL">
+    <button onclick="generateShortURL()">Get Short URL</button>
+    <div class="short-url" id="short-url"></div>
+  </div>
+
+  <script>
+    function generateShortURL() {
+      const originalURL = document.getElementById('original-url').value;
+      const shortURL = `${originalURL}`;
+      document.getElementById('short-url').innerText = shortURL;
+    }
+  </script>
+</body>
+</html>
